@@ -4,58 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pankaj Mittal | Senior Software Developer</title>
-  <meta name="description" content="Senior Java Developer | Spring Boot | Kubernetes | Microservices">
+  <meta name="description" content="Senior Java Developer | Spring Boot | Microservices | DevOps">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    /* Global Styles */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f8f9fa;
+      background: #f4f5f9;
       color: #333;
+      scroll-behavior: smooth;
     }
+
     header {
-      background: #1e1e2f;
+      background: linear-gradient(120deg, #1e1e2f, #343a40);
       color: white;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
     }
+
     header p {
       font-size: 1.1rem;
       margin-top: 0.5rem;
     }
+
     nav {
       margin-top: 1rem;
     }
+
     nav a {
       color: #ddd;
       text-decoration: none;
       margin: 0 12px;
       font-weight: 500;
+      transition: color 0.3s;
     }
+
     nav a:hover {
       color: #00b4d8;
     }
+
     section {
       max-width: 950px;
       margin: 2rem auto;
       background: white;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      box-shadow: 0 0 15px rgba(0,0,0,0.07);
     }
+
     h2 {
       border-bottom: 2px solid #eee;
       padding-bottom: 0.4rem;
       color: #222;
     }
+
     ul {
       padding-left: 1.2rem;
     }
+
     footer {
       text-align: center;
       background: #1e1e2f;
@@ -63,13 +77,7 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-    .contact a {
-      color: #0077b6;
-      text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
+
     .btn {
       display: inline-block;
       background: #00b4d8;
@@ -77,10 +85,13 @@
       padding: 10px 18px;
       border-radius: 5px;
       text-decoration: none;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
+      transition: 0.3s;
     }
+
     .btn:hover {
       background: #0077b6;
+      transform: translateY(-2px);
     }
 
     /* --- Skill Badges --- */
@@ -91,45 +102,64 @@
       margin-top: 10px;
       margin-bottom: 20px;
     }
+
     .badge {
       padding: 6px 12px;
       border-radius: 20px;
       color: white;
       font-size: 0.9rem;
       font-weight: 500;
+      transition: transform 0.2s;
     }
+
+    .badge:hover { transform: scale(1.1); }
+
     .badge.java { background-color: #e67e22; }
     .badge.spring { background-color: #2ecc71; }
+    .badge.micro { background-color: #6c63ff; }
+    .badge.kafka { background-color: #ff5f40; }
     .badge.docker { background-color: #2496ED; }
     .badge.k8s { background-color: #326CE5; }
-    .badge.aws { background-color: #FF9900; }
-    .badge.angular { background-color: #DD0031; }
-    .badge.microservices { background-color: #6c63ff; }
+    .badge.git { background-color: #F1502F; }
+    .badge.jenkins { background-color: #000; }
+    .badge.sql { background-color: #3A86FF; }
+    .badge.ansible { background-color: #EE0000; }
 
-    /* --- Progress Bars --- */
+    /* --- Animated Progress Bars --- */
     .skill {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
+
     .skill p {
       margin: 0 0 6px;
       font-weight: 500;
     }
+
     .progress {
       background-color: #eee;
       border-radius: 25px;
       overflow: hidden;
       height: 20px;
     }
+
     .progress-bar {
       background: linear-gradient(90deg, #00b4d8, #0077b6);
       height: 100%;
+      width: 0;
       text-align: right;
       padding-right: 8px;
       color: white;
       font-size: 0.8rem;
       line-height: 20px;
       border-radius: 25px 0 0 25px;
-      transition: width 1s ease-in-out;
+      transition: width 1.5s ease-in-out;
+    }
+
+    /* --- Responsive Layout --- */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      nav a { margin: 0 6px; font-size: 0.9rem; }
+      section { padding: 1.2rem; }
     }
   </style>
 </head>
@@ -137,102 +167,146 @@
 
   <header>
     <h1>Pankaj Mittal</h1>
-    <p>Senior Software Developer | Spring Boot | Kubernetes | Microservices</p>
+    <p>Senior Software Developer | Java | Spring Boot | Microservices</p>
+    <p>Pune, India | <a href="mailto:pankajmittaltech21@gmail.com" style="color:#00b4d8;">pankajmittaltech21@gmail.com</a> | +91-9172162345</p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#certifications">Certifications</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a Senior Software Developer with 9+ years of experience designing and developing scalable enterprise systems. I specialize in Java, Spring Boot, Docker, and Kubernetes, and I’m passionate about building reliable microservices and automating DevOps pipelines. My goal is to create clean, efficient, and production-ready software solutions.</p>
+    <p>Senior Java Developer with 9+ years of experience designing, developing, and deploying scalable enterprise applications using Java, Spring Boot, and Microservices. Skilled in API development, cloud-native architectures, messaging systems, and DevOps automation. Strong focus on secure, resilient, and production-ready systems with Agile leadership and UK client delivery experience.</p>
     <a class="btn" href="PankajMittal_Resume.pdf" target="_blank">Download Resume</a>
   </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>
 
-    <h3>Core Technologies</h3>
     <div class="badges">
       <span class="badge java">Java</span>
       <span class="badge spring">Spring Boot</span>
-      <span class="badge microservices">Microservices</span>
+      <span class="badge micro">Microservices</span>
+      <span class="badge kafka">Kafka</span>
       <span class="badge docker">Docker</span>
       <span class="badge k8s">Kubernetes</span>
-      <span class="badge aws">AWS</span>
-      <span class="badge angular">Angular</span>
+      <span class="badge git">Git</span>
+      <span class="badge jenkins">Jenkins</span>
+      <span class="badge sql">PL/SQL</span>
+      <span class="badge ansible">Ansible</span>
     </div>
 
-    <h3>Expertise Level</h3>
     <div class="skill">
-      <p>Backend Architecture</p>
-      <div class="progress"><div class="progress-bar" style="width: 95%;">95%</div></div>
+      <p>Backend Architecture & Microservices</p>
+      <div class="progress"><div class="progress-bar" data-value="95">95%</div></div>
     </div>
     <div class="skill">
-      <p>Microservices & DevOps</p>
-      <div class="progress"><div class="progress-bar" style="width: 90%;">90%</div></div>
+      <p>API Development & Integration</p>
+      <div class="progress"><div class="progress-bar" data-value="90">90%</div></div>
     </div>
     <div class="skill">
-      <p>Cloud & CI/CD Automation</p>
-      <div class="progress"><div class="progress-bar" style="width: 85%;">85%</div></div>
+      <p>DevOps & Automation</p>
+      <div class="progress"><div class="progress-bar" data-value="85">85%</div></div>
     </div>
     <div class="skill">
-      <p>Frontend (Angular)</p>
-      <div class="progress"><div class="progress-bar" style="width: 70%;">70%</div></div>
+      <p>Database & Query Optimization</p>
+      <div class="progress"><div class="progress-bar" data-value="80">80%</div></div>
     </div>
-  </section>
-
-  <section id="projects">
-    <h2>Highlighted Projects</h2>
-    <ul>
-      <li><strong>Centralized Logging Platform (ELK + Spring Boot):</strong> Integrated ELK stack across 20+ microservices to enable real-time logging and error tracing, reducing debugging time by 60%.</li>
-      <li><strong>Kubernetes Deployment Automation:</strong> Built CI/CD pipelines using Jenkins and Helm charts for automated Kubernetes deployment, improving release reliability.</li>
-      <li><strong>WebSocket Chat Application:</strong> Developed real-time chat using Spring Boot and Angular with WebSocket integration, handling 10K+ concurrent users.</li>
-      <li><strong>API Performance Optimization:</strong> Improved API response time by 45% through asynchronous calls and Redis caching.</li>
-    </ul>
   </section>
 
   <section id="experience">
     <h2>Professional Experience</h2>
 
-    <h3>Senior Software Developer — ABC Tech Pvt Ltd (2019–Present)</h3>
+    <h3>Citicorp Services India Pvt Ltd (Nov 2023 – Present)</h3>
     <ul>
-      <li>Architected and implemented scalable Spring Boot microservices for a financial application handling 2M+ users.</li>
-      <li>Implemented centralized monitoring using ELK and Prometheus for production systems.</li>
-      <li>Mentored junior developers and improved team code quality via code reviews and automation practices.</li>
+      <li>Built microservices-based enterprise applications using Java 8, Spring Boot, and JPA.</li>
+      <li>Optimized PL/SQL queries, cutting database latency by 25%.</li>
+      <li>Mentored junior developers and conducted code reviews.</li>
     </ul>
 
-    <h3>Software Developer — XYZ Systems (2015–2019)</h3>
+    <h3>Infosys Ltd (Oct 2018 – Nov 2023)</h3>
     <ul>
-      <li>Developed REST APIs and batch systems for core business modules using Spring Boot and MySQL.</li>
-      <li>Built Dockerized services and contributed to Kubernetes migration initiative.</li>
+      <li>Led cloud-native product development using Java, Spring Boot, Microservices, and JPA.</li>
+      <li>Implemented JWT-based authentication for secure REST APIs.</li>
+      <li>Developed event-driven systems using Apache Kafka for real-time data streaming.</li>
+      <li>Built CI/CD pipelines using Jenkins and Docker; managed UK onsite delivery.</li>
+    </ul>
+
+    <h3>Bharati Robotic Systems India Ltd (Jan 2018 – Oct 2018)</h3>
+    <ul>
+      <li>Owned end-to-end feature design and deployment for web applications.</li>
+      <li>Implemented optimized database queries and high-quality backend logic.</li>
+    </ul>
+
+    <h3>Amdocs Ltd (Feb 2016 – Sept 2017)</h3>
+    <ul>
+      <li>Built and maintained backend telecom systems and optimized SQL queries.</li>
+      <li>Improved API response time through caching and refactoring.</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>PG Diploma in Advanced Computing</strong> — CDAC ACTS, Pune</li>
+      <li><strong>B.Tech in Electronics & Communication</strong> — Poornima College of Engineering, Jaipur</li>
     </ul>
   </section>
 
   <section id="certifications">
-    <h2>Certifications & Achievements</h2>
+    <h2>Certifications & Trainings</h2>
     <ul>
-      <li>AWS Certified Developer – Associate</li>
-      <li>Oracle Certified Java Programmer (OCJP)</li>
-      <li>Recognized as “Outstanding Contributor” for microservices transformation initiative</li>
+      <li>Internal Certifications — Java, Spring Boot, Microservices (Infosys)</li>
+      <li>Project Management Fundamentals (IIL)</li>
+      <li>Business English Level 6 (Learnship)</li>
+      <li>Coding Certifications</li>
+    </ul>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Onsite client engagement in the UK for one year</li>
+      <li>Multiple Infosys awards for delivery excellence</li>
+      <li>Recognized as Academic Mentor (C-Language) at Poornima College</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:pankaj.mittal@gmail.com">pankaj.mittal@gmail.com</a></p>
-    <p>💼 LinkedIn: <a href="https://linkedin.com/in/pankajmittal" target="_blank">linkedin.com/in/pankajmittal</a></p>
-    <p>💻 GitHub: <a href="https://github.com/pankajmittal" target="_blank">github.com/pankajmittal</a></p>
+    <p>📧 <a href="mailto:pankajmittaltech21@gmail.com">pankajmittaltech21@gmail.com</a></p>
+    <p>📞 +91-9172162345</p>
+    <p>💼 <a href="https://www.linkedin.com/in/pankaj-mittal-2108" target="_blank">linkedin.com/in/pankaj-mittal-2108</a></p>
   </section>
 
   <footer>
     © 2025 Pankaj Mittal. All Rights Reserved.
   </footer>
+
+  <script>
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    function showProgress() {
+      progressBars.forEach(bar => {
+        const value = bar.getAttribute('data-value');
+        const barTop = bar.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (barTop < windowHeight - 100) {
+          bar.style.width = value + '%';
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showProgress);
+    window.addEventListener('load', showProgress);
+  </script>
 
 </body>
 </html>
