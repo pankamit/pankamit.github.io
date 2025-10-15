@@ -56,6 +56,9 @@
     ul {
       padding-left: 1.2rem;
     }
+    .skills-list li, .projects-list li {
+      margin-bottom: 0.6rem;
+    }
     footer {
       text-align: center;
       background: #1e1e2f;
@@ -82,14 +85,12 @@
     .btn:hover {
       background: #0077b6;
     }
-
-    /* --- Skill Badges --- */
+    /* Skill Badges */
     .badges {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 10px;
-      margin-bottom: 20px;
     }
     .badge {
       padding: 6px 12px;
@@ -104,9 +105,8 @@
     .badge.k8s { background-color: #326CE5; }
     .badge.aws { background-color: #FF9900; }
     .badge.angular { background-color: #DD0031; }
-    .badge.microservices { background-color: #6c63ff; }
 
-    /* --- Progress Bars --- */
+    /* Progress Bars */
     .skill {
       margin-bottom: 15px;
     }
@@ -161,14 +161,13 @@
     <div class="badges">
       <span class="badge java">Java</span>
       <span class="badge spring">Spring Boot</span>
-      <span class="badge microservices">Microservices</span>
       <span class="badge docker">Docker</span>
       <span class="badge k8s">Kubernetes</span>
       <span class="badge aws">AWS</span>
       <span class="badge angular">Angular</span>
     </div>
 
-    <h3>Expertise Level</h3>
+    <h3 style="margin-top: 25px;">Expertise Levels</h3>
     <div class="skill">
       <p>Backend Architecture</p>
       <div class="progress"><div class="progress-bar" style="width: 95%;">95%</div></div>
@@ -178,7 +177,7 @@
       <div class="progress"><div class="progress-bar" style="width: 90%;">90%</div></div>
     </div>
     <div class="skill">
-      <p>Cloud & CI/CD Automation</p>
+      <p>Database Design</p>
       <div class="progress"><div class="progress-bar" style="width: 85%;">85%</div></div>
     </div>
     <div class="skill">
@@ -189,17 +188,28 @@
 
   <section id="projects">
     <h2>Highlighted Projects</h2>
-    <ul>
-      <li><strong>Centralized Logging Platform (ELK + Spring Boot):</strong> Integrated ELK stack across 20+ microservices to enable real-time logging and error tracing, reducing debugging time by 60%.</li>
-      <li><strong>Kubernetes Deployment Automation:</strong> Built CI/CD pipelines using Jenkins and Helm charts for automated Kubernetes deployment, improving release reliability.</li>
-      <li><strong>WebSocket Chat Application:</strong> Developed real-time chat using Spring Boot and Angular with WebSocket integration, handling 10K+ concurrent users.</li>
-      <li><strong>API Performance Optimization:</strong> Improved API response time by 45% through asynchronous calls and Redis caching.</li>
+    <ul class="projects-list">
+      <li>
+        <strong>Centralized Logging Platform (ELK + Spring Boot):</strong>
+        Integrated ELK stack across 20+ microservices to enable real-time logging and error tracing, reducing debugging time by 60%.
+      </li>
+      <li>
+        <strong>Kubernetes Deployment Automation:</strong>
+        Built CI/CD pipelines using Jenkins and Helm charts for automated Kubernetes deployment, improving release reliability.
+      </li>
+      <li>
+        <strong>WebSocket Chat Application:</strong>
+        Developed real-time chat using Spring Boot and Angular with WebSocket integration, handling 10K+ concurrent users.
+      </li>
+      <li>
+        <strong>API Performance Optimization:</strong>
+        Improved API response time by 45% through asynchronous calls and Redis caching.
+      </li>
     </ul>
   </section>
 
   <section id="experience">
     <h2>Professional Experience</h2>
-
     <h3>Senior Software Developer — ABC Tech Pvt Ltd (2019–Present)</h3>
     <ul>
       <li>Architected and implemented scalable Spring Boot microservices for a financial application handling 2M+ users.</li>
@@ -225,9 +235,9 @@
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:pankaj.mittal@gmail.com">pankaj.mittal@gmail.com</a></p>
-    <p>💼 LinkedIn: <a href="https://linkedin.com/in/pankajmittal" target="_blank">linkedin.com/in/pankajmittal</a></p>
-    <p>💻 GitHub: <a href="https://github.com/pankajmittal" target="_blank">github.com/pankajmittal</a></p>
+    <p>Email: <a href="mailto:pankaj.mittal@gmail.com">pankaj.mittal@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/pankajmittal" target="_blank">linkedin.com/in/pankajmittal</a></p>
+    <p>GitHub: <a href="https://github.com/pankajmittal" target="_blank">github.com/pankajmittal</a></p>
   </section>
 
   <footer>
